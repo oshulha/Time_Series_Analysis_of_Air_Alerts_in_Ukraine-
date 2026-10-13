@@ -1,7 +1,13 @@
 import os
+import sys
 import re
 import time
 import lxml.html
+
+# Забезпечуємо, що відносні шляхи (TelegramChatExport_...) вирішуються
+# відносно кореня репозиторію, а не папки scripts/
+_REPO_ROOT = os.path.join(os.path.dirname(__file__), "..", "..")
+os.chdir(os.path.abspath(_REPO_ROOT))
 
 def scan_all_files():
     folder = 'TelegramChatExport_2026-10-12'

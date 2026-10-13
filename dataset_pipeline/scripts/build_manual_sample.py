@@ -5,7 +5,12 @@ Evaluates classifier precision, recall, and overall accuracy on 75 carefully cur
 
 import csv
 import sys
+import os
 import re
+
+# Додаємо dataset_pipeline/ до шляху, щоб `from pipeline.xxx` працювало
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+
 from pipeline.extractor import extract_messages_from_file
 from pipeline.classifier import classify_message
 from pipeline.constants import CANONICAL_REGIONS, OBLAST_ALIASES

@@ -6,6 +6,11 @@ pairs events into intervals, detects anomalies, and generates comprehensive qual
 
 import os
 import sys
+
+# Додаємо dataset_pipeline/ до шляху, щоб `from pipeline.xxx` працювало
+# незалежно від того, звідки запускається скрипт
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+
 import csv
 import time
 import argparse
