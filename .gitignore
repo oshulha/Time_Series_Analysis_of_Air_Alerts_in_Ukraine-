@@ -1,0 +1,10 @@
+# Generated pipeline output (large CSV files)
+data/
+
+# Pytest cache
+.pytest_cache/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
